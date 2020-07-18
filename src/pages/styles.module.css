@@ -1,0 +1,35 @@
+.container {
+}
+
+.container .content {
+
+}
+
+.container .content .banner {
+    width: 100vw;
+    height: 450px;
+    background-image: url('../images/ligacao2.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+}
+
+.container .content .banner .beforeTitle {
+    font-weight: 600;
+    font-size: 20.5px;
+    color: #281342;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+.container .content .banner .title {
+    font-weight: 900;
+    font-size: 110px;
+    line-height: 85px;
+    color: #281342;
+}

@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.container .logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+
+.container .telzir {
+    font-family: 'Questrial', sans-serif;
+    font-size: 50px;
+}
+
+.container .headerLinks {
+    display: flex;
+}
+
+.container .headerLinks p {
+    font-size: 14px;
+    margin-right: 25px;
+}
