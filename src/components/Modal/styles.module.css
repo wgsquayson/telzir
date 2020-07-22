@@ -12,7 +12,7 @@
     display: none;
 }
   
-.modalMain {
+.modalDisplayBlock .modalMain {
     position:fixed;
     background: white;
     width: 75%;
@@ -25,16 +25,8 @@
     justify-content: space-around;
     border-radius: 7px;
 }
-  
-.displayBlock {
-    display: block;
-}
-  
-.displayNone {
-    display: none;
-}
 
-.img {
+.modalDisplayBlock .modalMain .img {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -44,7 +36,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-    .modalMain {
+    .modalDisplayBlock .modalMain {
         width: 100%
     }
 }
