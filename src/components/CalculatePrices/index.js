@@ -1,4 +1,6 @@
-function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
+import React from 'react';
+
+function calculate(plan, initialDDD, finalDDD, inputMinutes) {
     let excedentPrice, discountPrice, totalPrice;
 
     switch (plan) {
@@ -260,32 +262,16 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
     return [discountPrice, totalPrice];
 }
 
-describe('prices', () => {
-    it('should return 0 and 38', () => {
-        const test = calculatePrices('FaleMais30', '011', '016', 20);
+export default function CalculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
 
-        expect(test[0]).toBe(0);
-        expect(test[1]).toBe(38);
-    });
+    const result = calculate(plan, initialDDD, finalDDD, inputMinutes)
 
-    it('should return 37.4 and 136', () => {
-        const test = calculatePrices('FaleMais60', '011', '017', 80);
-
-        expect(test[0]).toBe(37.4);
-        expect(test[1]).toBe(136);
-    });
-
-    it('should return 167.2 and 380', () => {
-        const test = calculatePrices('FaleMais120', '018', '011', 200);
-
-        expect(test[0]).toBe(167.2);
-        expect(test[1]).toBe(380);
-    });
-
-    it('should return undefined', () => {
-        const test = calculatePrices('FaleMais30', '018', '017', 100);
-
-        expect(test[0]).toBe(undefined);
-        expect(test[1]).toBe(undefined);
-    });
-});
+    return(
+        <div>
+            <p>Com o plano:</p>
+            <p>{result[0]}</p>
+            <p>Sem o plano:</p>
+            <p>{result[1]}</p>
+        </div>
+    )
+}
