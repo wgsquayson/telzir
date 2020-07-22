@@ -11,6 +11,5 @@ Também foi usado o React-Select para os inputs do tipo select personalizados.
 Executa o projeto em http://localhost:3000
 
 ## yarn jest
-Executa os testes do projeto, presentes na pasta __tests__/unit
-
+Executa os testes do projeto, presentes na pasta tests/unit
 
