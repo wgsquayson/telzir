@@ -7,9 +7,9 @@ Também foi usado o React-Select para os inputs do tipo select personalizados.
 
 ## Comandos para execução:
 
-git clone https://github.com/wgsquayson/telzir.git
-cd telzir
-npm install
+git clone https://github.com/wgsquayson/telzir.git <br />
+cd telzir <br />
+npm install <br />
 
 ## yarn start
 Executa o projeto em http://localhost:3000
