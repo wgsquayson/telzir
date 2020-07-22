@@ -38,10 +38,12 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -52,10 +54,12 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -66,11 +70,13 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -81,7 +87,11 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
+                    break;
+                default:
                     break;
             }
             break;
@@ -122,10 +132,12 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -136,11 +148,13 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -151,11 +165,13 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -166,7 +182,11 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
+                    break;
+                default:
                     break;
             }
             break;
@@ -207,10 +227,12 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -221,11 +243,13 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -236,11 +260,13 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -251,9 +277,15 @@ function calculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
+                default:
+                    break;
             }
+            break;
+        default:
             break;
     }
 

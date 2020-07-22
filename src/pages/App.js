@@ -1,24 +1,41 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
+import Select from 'react-select';
+import ReactModal from 'react-modal';
+
 import Header from '../components/Header';
+
 import PhoneCall from '../images/phonecall.svg';
 import BusinessWoman from '../images/businesswoman.svg';
-import Select from 'react-select';
+import Close from '../images/close.png'
+
+import CalculatePrices from '../utils/calculatePrices';
 
 
 function App() {
   const [plan, setPlan] = useState([]);
   const [initialDDD, setInitialDDD] = useState('');
   const [finalDDD, setFinalDDD] = useState('');
-  const [inputMinutes, setInputMinutes] = useState();
+  const [inputMinutes, setInputMinutes] = useState('');
+
+  const [isOpen, setIsOpen] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log([plan, initialDDD, finalDDD, inputMinutes]);
+    const results = CalculatePrices(plan, initialDDD, finalDDD, inputMinutes);
+    setIsOpen(true);
   }
 
   function handlePlanChange(value) {
-    console.log(value)
+    setPlan(value.value);
+  }
+
+  function handleInitialDDDChange(value) {
+    setInitialDDD(value.value);
+  }
+
+  function handleFinalDDDChange(value) {
+    setFinalDDD(value.value);
   }
 
   const plans = [
@@ -52,28 +69,28 @@ function App() {
           <form onSubmit={handleSubmit}>
             <p className={styles.priceSectionTitle}>Calcule o seu custo agora!</p>
             <p>Escolha o plano:</p>
-            <Select 
-              options={plans} 
+            <Select
+              options={plans}
               placeholder="Selecione..."
               onChange={handlePlanChange}
-              required 
+              required={true}
             />
             <div className={styles.formGroup}>
               <div>
                 <p>Escolha o DDD de origem:</p>
-                <Select 
-                  options={ddds} 
+                <Select
+                  options={ddds}
                   placeholder="Selecione..."
-                  onChange={e => setInitialDDD(e.target.value)}
-                  required 
+                  onChange={handleInitialDDDChange}
+                  required
                 />
               </div>
               <div>
                 <p>Escolha o DDD de destino:</p>
-                <Select 
-                  options={ddds} 
+                <Select
+                  options={ddds}
                   placeholder="Selecione..."
-                  onChange={e => setFinalDDD(e.target.value)}
+                  onChange={handleFinalDDDChange}
                   required
                 />
               </div>
@@ -81,9 +98,9 @@ function App() {
             <div className={styles.formGroup}>
               <div>
                 <p>Digite a quantidade de <br />minutos que deseja falar:</p>
-                <input 
-                  className={styles.minutesInput} 
-                  type="text" 
+                <input
+                  className={styles.minutesInput}
+                  type="text"
                   value={inputMinutes}
                   onChange={e => setInputMinutes(e.target.value)}
                   required
@@ -95,6 +112,19 @@ function App() {
           <img src={BusinessWoman} alt="" style={{ width: '45%' }} />
         </div>
       </div>
+      <ReactModal
+        isOpen={isOpen}
+      >
+        <img 
+          style={{ width: 80, height: 80, position: 'absolute', top: 60, right: 60, cursor: 'pointer' }} 
+          onClick={() => {setIsOpen(false)}} 
+          src={Close} alt="Fechar"
+        />
+        
+        <div className={styles.modalContainer} style={{ display: 'flex', width:'100%', height:'100%', justifyContent: 'center', alignItems: 'center' }}>
+          <p>teste</p>
+        </div>
+      </ReactModal>
     </div>
   );
 }

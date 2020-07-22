@@ -1,6 +1,4 @@
-import React from 'react';
-
-function calculate(plan, initialDDD, finalDDD, inputMinutes) {
+export default function CalculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
     let excedentPrice, discountPrice, totalPrice;
 
     switch (plan) {
@@ -40,10 +38,12 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -54,10 +54,12 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -68,11 +70,13 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -83,7 +87,11 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
+                    break;
+                default:
                     break;
             }
             break;
@@ -124,10 +132,12 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -138,11 +148,13 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -153,11 +165,13 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -168,7 +182,11 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
+                    break;
+                default:
                     break;
             }
             break;
@@ -209,10 +227,12 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case '016':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.9;
 
@@ -223,11 +243,13 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '017':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 2.7;
 
@@ -238,11 +260,13 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
 
                 case '018':
-                    switch(finalDDD) {
+                    switch (finalDDD) {
                         case '011':
                             totalPrice = inputMinutes * 1.9;
 
@@ -253,25 +277,17 @@ function calculate(plan, initialDDD, finalDDD, inputMinutes) {
                                 discountPrice = excedentPrice + (excedentPrice * 0.1);
                             }
                             break;
+                        default:
+                            break;
                     }
                     break;
+                default:
+                    break;
             }
+            break;
+        default:
             break;
     }
 
     return [discountPrice, totalPrice];
-}
-
-export default function CalculatePrices(plan, initialDDD, finalDDD, inputMinutes) {
-
-    const result = calculate(plan, initialDDD, finalDDD, inputMinutes)
-
-    return(
-        <div>
-            <p>Com o plano:</p>
-            <p>{result[0]}</p>
-            <p>Sem o plano:</p>
-            <p>{result[1]}</p>
-        </div>
-    )
 }
