@@ -5,7 +5,11 @@
 Este projeto foi feito em ReactJs, em conjunto com o framework Jest para testes.
 Também foi usado o React-Select para os inputs do tipo select personalizados.
 
-## Comandos:
+## Comandos para execução:
+
+git clone https://github.com/wgsquayson/telzir.git
+cd telzir
+npm install
 
 ## yarn start
 Executa o projeto em http://localhost:3000
