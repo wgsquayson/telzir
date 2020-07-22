@@ -25,6 +25,14 @@
     color: #281342;
 }
 
+.container .content .phoneCallSvg {
+    width: 55%;
+}
+
+.container .content .businessWomanSvg {
+    width: 45%;
+}
+
 .container .content .about {
     width: 100vw;
     display: flex;
@@ -53,7 +61,6 @@
 }
 
 .container .content .priceSection form {
-    align-self: flex-start;
     width: 40%;
 }
 
@@ -63,6 +70,7 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 
 .container .content .priceSection form p, .formGroup div p {
     font-size: 15px;
@@ -107,3 +115,100 @@
     background-color: #6C63FF;
 }
 
+.container .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+}
+
+.container .footer p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container .modalContent {
+    margin: 0 auto;
+}
+
+.container .modalContent .noContent {
+    text-align: center;
+    font-size: 25px;
+}
+
+.container .modalContent p {
+    font-weight: bold;
+}
+
+.container .modalContent .price {
+    font-size: 50px;
+}
+
+.container .verticalLine {
+    border-left: 1px solid #565651;
+    height: 80%;
+}
+
+@media only screen and (max-width: 850px) {
+    .container .content .banner {
+        height: 250px;
+        padding-left: 30px;
+    }
+
+    .container .content .banner .beforeTitle {
+        font-size: 15px;
+    }
+
+    .container .content .banner .title {
+        font-size: 80px;
+        line-height: 60px;
+    }
+
+    .container .content .phoneCallSvg {
+        display: none;
+    }
+
+    .container .content .about {
+        padding: 30px 30px 0 30px;
+    }
+
+    .container .content .about .aboutText {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container .content .priceSection {
+        padding: 30px 30px 0 30px;
+    }
+
+    .container .content .priceSection form {
+        width: 100%;
+    }
+
+    .container .content .businessWomanSvg {
+        display: none;
+    }
+
+    .container .footer {
+        height: 60px;
+        margin-top: 10px;
+    }
+
+    .container .footer p {
+        font-size: 25px;
+    }
+
+    .container .modalContent .noContent {
+        font-size: 15px;
+    }
+
+    .container .modalContent p {
+        font-size: 13px;
+    }
+
+    .container .modalContent .price {
+        font-size: 40px;
+    }
+}

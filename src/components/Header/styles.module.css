@@ -4,8 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 0 150px 0 150px;
 }
 
 .container .logo {
@@ -27,4 +26,19 @@
     font-size: 15px;
     margin-right: 25px;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 850px) {
+    .container {
+        padding: 0 30px 0 30px;
+    }
+
+    .container .headerLinks {
+        flex-direction: column;
+    }
+
+    .container .headerLinks p {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }
