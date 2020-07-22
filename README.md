@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto:
 
-Este projeto foi feito em ReactJs, em conjunto com o framework Jest para testes. O gerenciador de pacotes usado foi o yarn. Também foi usado o React-Select para os inputs do tipo select personalizados. O Projeto está responsivo.
+Este projeto foi feito em ReactJs, em conjunto com o framework Jest para testes. O gerenciador de pacotes usado foi o yarn. Também foi usado o React-Select para os inputs do tipo select personalizados. O projeto está responsivo.
 
 ## Comandos para execução:
 
